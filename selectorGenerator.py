@@ -31,6 +31,6 @@ if(len(selectedElements)>0):
             if(htmlParamsWithValues[int(id)][0]) == "id":
                 result = result + "#" + htmlParamsWithValues[int(id)][1].replace('"', "").split()[0]
             if(htmlParamsWithValues[int(id)][0]) != "id" and htmlParamsWithValues[int(id)][0] != "class":
-                result = result + "["+htmlParamsWithValues[int(id)][0]+":"+'"'+htmlParamsWithValues[int(id)][1].replace('"', "")+'"'+"]"
+                result = result + "["+htmlParamsWithValues[int(id)][0]+"+"+'"'+htmlParamsWithValues[int(id)][1].replace('"', "")+'"'+"]"
 result = result + "'" + ")"
 print("\n" + "Twój selector to: " + result)
